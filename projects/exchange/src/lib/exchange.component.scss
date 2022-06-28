@@ -1,0 +1,107 @@
+section {
+    display: flex;
+    align-items: center;
+    height: 87%;
+    justify-content: center;
+
+    .wrapper {
+        width: 370px;
+        padding: 30px;
+        border-radius: 7px;
+        background: #fff;
+        box-shadow: 7px 7px 20px #0000000d;
+
+        header {
+            font-size: 28px;
+            font-weight: 300;
+            text-align: center;
+        }
+        .drop-list {
+            display: flex;
+            margin-top: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .form {
+            .amount {
+                p {
+                    font-size: 18px;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+
+                input {
+                    height: 50px;
+                    font-size: 17px;
+                    padding: 0 15px;
+                    border: 1px solid #999;
+                    border-radius: 10px;
+                    width: 90%;
+                    transition: all 0.5s ease-in-out;
+                    outline: none;
+                    text-align: center;
+                    font-weight: 500;
+
+                    &:hover {
+                        border: 1px solid #675afe;
+                    }
+
+                    &:focus {
+                        border: 1px solid #675afe;
+                        padding: 0 14px;
+                        box-shadow: rgba(103, 90, 254, 0.35) 0px 5px 15px;
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .exchange-rate {
+        margin: 10px 0px;
+    }
+
+    .btn-wrapper {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+::ng-deep {
+    .ng-select .ng-select-container {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #999;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            border: 1px solid #675afe;
+            color: #675afe;
+            cursor: pointer;
+        }
+    }
+
+    .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+        text-align: center;
+        padding: 10px;
+        transition: 0.5s ease-in-out all;
+
+        &:hover {
+            background-color: #f9f8fd;
+            cursor: pointer;
+            color: #675afe;
+            transform: scale(1.01);
+        }
+    }
+
+    .ng-dropdown-panel .scroll-host {
+        background-color: #fff;
+        border-radius: 0px 0px 10px 10px;
+    }
+}
+
+.info {
+    margin-bottom: 10px;
+}

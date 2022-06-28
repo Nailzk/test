@@ -1,0 +1,49 @@
+<section>
+  <div class="wrapper">
+    <header>Currency Converter</header>
+    <form [formGroup]="form" class="form">
+      <div class="amount">
+        <p>From</p>
+        <input required formControlName="convertFrom" />
+      </div>
+
+      <div class="amount">
+        <p>To</p>
+        <input required formControlName="convertTo" />
+      </div>
+    </form>
+
+    <div class="drop-list">
+      <div class="select-item">
+        <p class="info">To</p>
+        <ng-select
+          [(ngModel)]="toConvertCurrency"
+          [clearable]="false"
+          [hideSelected]="true"
+          [searchable]="false"
+          (ngModelChange)="handleCurrencyChanges()"
+        >
+          <ng-option *ngFor="let i of currencies" [value]="i">{{
+            i
+          }}</ng-option>
+        </ng-select>
+      </div>
+      <div class="select-item">
+        <p class="info">From</p>
+        <ng-select
+          [(ngModel)]="fromConvertCurrency"
+          [clearable]="false"
+          [hideSelected]="true"
+          [searchable]="false"
+          (ngModelChange)="handleCurrencyChanges()"
+        >
+          <ng-option *ngFor="let i of currencies" [value]="i">{{
+            i
+          }}</ng-option>
+        </ng-select>
+      </div>
+    </div>
+
+    <div class="exchange-rate" *ngIf="isLoading">Getting exchange rate...</div>
+  </div>
+</section>
